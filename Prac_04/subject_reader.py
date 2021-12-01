@@ -32,7 +32,7 @@ def get_data():
 def display_teachers(data):
     """ print the subject being taught by the teacher in succession """
     for subject_info in data:
-        print(f"{subject_info[0]} is being taught by {subject_info[1]} to {subject_info[2],3} students.")
+        print(f"{subject_info[0]} is being taught by {subject_info[1]} to {subject_info[2]} students.")
 
 
 main()
