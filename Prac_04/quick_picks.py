@@ -19,7 +19,7 @@ def generate_matrix(no_quick_picks):
     for i in range(no_quick_picks):
         quick_list = []
         for j in range(PICK_LENGTH):
-            # This checks to see if there are duplicate numbers
+            # This checks for duplicate numbers
             r = random.randint(MIN, MAX)
             if r not in quick_list:
                 quick_list.append(r)
