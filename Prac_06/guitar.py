@@ -15,7 +15,5 @@ class Guitar:
     def is_vintage(self):
         YEAR = 2020
         year_diff = YEAR - self.year
-        if year_diff >= 50:
-            return "True"
-        else:
-            return "False"
+        return year_diff >= 50
+
