@@ -18,7 +18,10 @@ def language():
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)
 
     languages = [ruby, python, visual_basic]
-
+    print("The dynamic languages are:")
     for i in languages:
         if i.is_dynamic():
             print(i.name)
+
+
+language()
