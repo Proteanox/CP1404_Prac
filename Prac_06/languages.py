@@ -1,3 +1,6 @@
+"""client program for operation procedure"""
+
+
 class ProgrammingLanguage:
     def __init__(self, name="", typing="", reflection="", year=""):
         self.year = year
@@ -12,7 +15,7 @@ class ProgrammingLanguage:
         return self.typing == "Dynamic"
 
 
-def language():
+def language(): # language function to create the list an perform operations
     ruby = ProgrammingLanguage("Ruby", "Dynamic", True, 1995)
     python = ProgrammingLanguage("Python", "Dynamic", True, 1991)
     visual_basic = ProgrammingLanguage("Visual Basic", "Static", False, 1991)

@@ -17,7 +17,6 @@ class Car:
         return f"{self.name}'s , fuel is ={self.fuel}, odometer's reading is ={self.odometer}"
 
     def add_fuel(self, amount):
-        """Add amount to the car's fuel."""
         self.fuel += amount
 
     def drive(self, distance):

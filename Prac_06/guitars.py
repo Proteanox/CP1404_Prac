@@ -1,9 +1,11 @@
-from Prac_06.guitar import Guitar
+
+""" the main client program"""
+from Prac_06.guitar import Guitar # importing the guitar class
 
 
-def main():
-    guitar_list = []
-    print("My Guitars:")
+def main(): # main function
+    guitar_list = [] # empty guitar list
+    print("My Guitars:") # opening statement
     name = input("Name: ")
     while name != "":
         year = int(input("Year: "))
@@ -15,7 +17,6 @@ def main():
 
     guitar_list.append(Guitar("Gibson L-5 CES", 1922, 16035.40))
     guitar_list.append(Guitar("Line 6 JTV-59", 2010, 1512.9))
-
 
     for guitar in guitar_list:
         print(f"Guitar {guitar_list.index(guitar) + 1}: {guitar}")
