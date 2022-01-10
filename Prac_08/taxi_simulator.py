@@ -4,7 +4,8 @@ from Prac_08.silver_service_taxi import ServiceServiceTaxi
 
 def main():
     print("Let's Drive!")
-    taxi = [Taxi("Prius", 100), ServiceServiceTaxi("Limo", 100, 2), ServiceServiceTaxi("Hummer", 200, 4)]
+    taxis = [Taxi("Prius", 100), ServiceServiceTaxi("Limo", 100, 2), ServiceServiceTaxi("Hummer", 200, 4)]
+    current_taxi = None
     while True:
         print("q)uit, c)hoose taxi, d)rive")
         ans = input(">>>")
@@ -17,4 +18,13 @@ def main():
 
         elif ans == 'c':
             print("Taxis available: ")
+            for count, taxi in enumerate(taxis):
+                print("{} - {}".format(count, taxi))
+            choice = int(input("Choose Taxi: "))
+            try:
+                current_taxi = taxis[choice]
+            except IndexError:
+                print("Invalid taxi choice")
+
+        elif ans == 'd':
 
