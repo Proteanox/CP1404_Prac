@@ -1,8 +1,11 @@
 from Prac_08.taxi import Taxi
 from Prac_08.silver_service_taxi import ServiceServiceTaxi
+from Prac_06.car import Car
+
 
 
 def main():
+    total =0
     print("Let's Drive!")
     taxis = [Taxi("Prius", 100), ServiceServiceTaxi("Limo", 100, 2), ServiceServiceTaxi("Hummer", 200, 4)]
     current_taxi = None
@@ -11,7 +14,7 @@ def main():
         ans = input(">>>")
         if ans == 'q':
             print("\n Goodbye")
-            print("Total trip cost: ${:.2f}".format(total_bill))
+            print("Total trip cost: ${:.2f}".format(total))
             print("Taxis are now:")
             for i, taxi in enumerate(taxis):
                 print("{} - {}".format(i, taxi))
@@ -27,4 +30,14 @@ def main():
                 print("Invalid taxi choice")
 
         elif ans == 'd':
+            if current_taxi:
+                current_taxi.start_fare()
+                drive_distance = float(input("Drive How far"))
+                current_taxi.drive(drive_distance)
 
+                print(f"Your {current_taxi.name} trip costs you {current_taxi.get_fare()}")
+                total += current_taxi.get_fare()
+            else:
+                print(' YOU NEED TO CHOOSE A TAXI FIRST')
+        else:
+            print("Invalid Option")
