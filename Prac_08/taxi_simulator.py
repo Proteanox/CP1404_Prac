@@ -1,14 +1,14 @@
 from Prac_08.taxi import Taxi
-from Prac_08.silver_service_taxi import ServiceServiceTaxi
+from Prac_08.silver_service_taxi import SilverServiceTaxi
 from Prac_06.car import Car
 
 
 def main():
     total = 0
     print("Let's Drive!")
-    taxis = [Taxi("Prius", 100), ServiceServiceTaxi("Limo", 100, 2), ServiceServiceTaxi("Hummer", 200, 4)]
+    taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     current_taxi = None
-    print("Bill to date: {total}f}")
+    print(f"Bill to date: {total}")
 
     while True:
         print("q)uit, c)hoose taxi, d)rive")
