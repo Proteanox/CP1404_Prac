@@ -3,12 +3,13 @@ from Prac_08.silver_service_taxi import ServiceServiceTaxi
 from Prac_06.car import Car
 
 
-
 def main():
-    total =0
+    total = 0
     print("Let's Drive!")
     taxis = [Taxi("Prius", 100), ServiceServiceTaxi("Limo", 100, 2), ServiceServiceTaxi("Hummer", 200, 4)]
     current_taxi = None
+    print("Bill to date: {total}f}")
+
     while True:
         print("q)uit, c)hoose taxi, d)rive")
         ans = input(">>>")
@@ -16,9 +17,9 @@ def main():
             print("\n Goodbye")
             print("Total trip cost: ${:.2f}".format(total))
             print("Taxis are now:")
-            for i, taxi in enumerate(taxis):
-                print("{} - {}".format(i, taxi))
-
+            for count, taxi in enumerate(taxis):
+                print("{} - {}".format(count, taxi))
+            break
         elif ans == 'c':
             print("Taxis available: ")
             for count, taxi in enumerate(taxis):
@@ -41,3 +42,6 @@ def main():
                 print(' YOU NEED TO CHOOSE A TAXI FIRST')
         else:
             print("Invalid Option")
+
+
+main()
