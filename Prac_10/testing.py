@@ -55,6 +55,7 @@ run_tests()
 # (PyCharm may see your >>> doctest comments and run doctests anyway.)
 doctest.testmod()
 
+
 # (don't change the tests, change the function!) done
 
 # starting with a capital and ending with a single full stop.
@@ -66,3 +67,15 @@ doctest.testmod()
 # test this and watch the tests fail
 # then write the body of the function so that the tests
 
+def sentence_construct(phrase):
+    """ use a phrase to construct a statement , use capitalize
+    >>> sentence_construct('hi')
+    'hi.'
+    >>> sentence_construct(' my name is siddhant')
+    'My name is siddhant.'
+     """
+
+    sentence = phrase.capitalize()
+    if sentence[-1] != '.':
+        sentence += '.'
+    return sentence
