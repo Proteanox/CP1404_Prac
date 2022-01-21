@@ -2,16 +2,16 @@ import os
 
 
 def main():
-    extension_to_category = {}
+    category_by_end = {}
     os.chdir("FilesToSort")
     for file in os.listdir('.'):
         if os.path.isdir(file):
             continue
-
+        # split csv index
         end = file.split('.')[-1]
-        if end not in extension_to_category:
+        if end not in category_by_end:
             category = input(f"Input Your Categorization Scale {end}")
-            extension_to_category[end] = category
+            category_by_end[end] = category
             try:
                 # We don't expect to get an exception due to the if statement
                 os.mkdir(category)
