@@ -5,14 +5,17 @@ from kivy.uix.button import Button
 
 class Dynamic_labels(App):
 
+    def __init__(self, **kwargs):
+        super().__init__(kwargs)
+        self.name_to_phone = {"James": "909", "Helen": "238", "Tanishi" : "007"}
+
     def init(self, kwargs):
         super().init(kwargs)
-        self.name_to_phone = {"James": "909", "Helen": "238", "Tanishi" : "007"}
 
     def build(self):
         """Build the Kivy GUI."""
         self.title = "Dynamic Widgets"
-        self.root = Builder.load_file('dynamic_labels.kv')
+        self.root = Builder.load_file('dynamic_widgets.kv')
         self.create_widgets()
         return self.root
 
